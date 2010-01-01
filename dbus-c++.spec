@@ -6,7 +6,7 @@
 %define develname %mklibname -d %name
 Name:		dbus-c++
 Version:	0.5.0
-Release:	%mkrel -c %{git_date} 1
+Release:	%mkrel -c %{git_date} 2
 Summary:	Native C++ bindings for D-Bus
 
 Group:		System/Libraries
@@ -43,7 +43,9 @@ Native C++ bindings for D-Bus for use in C++ programs.
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
-Provides:	%name-devel = %{version}-%{release}
+Requires:	%name >= %version-%release
+rovides:	%name-devel = %{version}-%{release}
+
 %description	-n %develname
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
