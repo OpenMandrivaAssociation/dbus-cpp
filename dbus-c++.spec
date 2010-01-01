@@ -44,7 +44,7 @@ Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%name >= %version-%release
-rovides:	%name-devel = %{version}-%{release}
+Provides:	%name-devel = %{version}-%{release}
 
 %description	-n %develname
 The %{name}-devel package contains libraries and header files for
