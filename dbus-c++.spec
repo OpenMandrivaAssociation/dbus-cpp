@@ -6,7 +6,7 @@
 %define develname %mklibname -d %name
 Name:		dbus-c++
 Version:	0.5.0
-Release:	%mkrel -c %{git_date} 2
+Release:	%mkrel -c %{git_date} 3
 Summary:	Native C++ bindings for D-Bus
 
 Group:		System/Libraries
