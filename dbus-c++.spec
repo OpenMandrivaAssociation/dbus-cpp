@@ -63,7 +63,7 @@ developing applications that use %{name}.
 autoreconf
 
 %build
-%configure2_5x --disable-static --enable-glib
+%configure2_5x --disable-static --enable-glib --disable-tests
 make
 
 %install
