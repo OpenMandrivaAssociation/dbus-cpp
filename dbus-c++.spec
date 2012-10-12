@@ -27,6 +27,7 @@ Source0:	http://downloads.sourceforge.net/project/dbus-cplusplus/%{name}/%{versi
 
 Patch0:	libdbus-c++-0.9.0-mdv-build_order.patch
 Patch1: libdbus-c++-0.9.0-mdv-linking.patch
+Patch2:	dbus-c++-0.9.0-gcc-4.7.patch
 
 BuildRequires:	dbus-devel
 BuildRequires:	glib2-devel
@@ -60,9 +61,10 @@ developing applications that use %{name}.
 %setup -q -n lib%{name}-%{version}
 %patch0 -p1
 %patch1 -p1
-autoreconf
+%patch2 -p1
 
 %build
+autoreconf
 %configure2_5x --disable-static --enable-glib --disable-tests
 make
 
