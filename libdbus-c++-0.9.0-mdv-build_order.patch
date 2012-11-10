@@ -1,0 +1,12 @@
+Index: libdbus-c++-0.9.0/src/Makefile.am
+===================================================================
+--- libdbus-c++-0.9.0.orig/src/Makefile.am
++++ libdbus-c++-0.9.0/src/Makefile.am
+@@ -37,6 +37,7 @@ AM_CPPFLAGS = \
+ 	$(ecore_CFLAGS)
+ 
+ SUBDIRS = \
++	. \
+ 	integration
+ 
+ HEADER_DIR  = $(top_srcdir)/include/dbus-c++
