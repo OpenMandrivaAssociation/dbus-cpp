@@ -65,6 +65,8 @@ developing applications that use %{name}.
 %patch2 -p1
 
 %build
+sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac
+
 autoreconf
 %configure2_5x \
 		--disable-static \
