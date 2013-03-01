@@ -10,7 +10,7 @@ Version:	0.9.0
 %if 0%{git_date}
 Release:	%mkrel -c %{git_date} 4
 %else
-Release:	2
+Release:	3
 %endif
 
 Summary:	Native C++ bindings for D-Bus
@@ -30,12 +30,11 @@ Patch0:		libdbus-c++-0.9.0-mdv-build_order.patch
 Patch1:		libdbus-c++-0.9.0-mdv-linking.patch
 Patch2:		dbus-c++-0.9.0-gcc-4.7.patch
 
-BuildRequires:	dbus-devel
-BuildRequires:	glib2-devel
-BuildRequires:	gtkmm2.4-devel
-BuildRequires:	libtool
-BuildRequires:	expat-devel
-BuildRequires:	ecore-devel
+BuildRequires:	pkgconfig(dbus-1)
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(gtkmm-2.4)
+BuildRequires:	pkgconfig(expat)
+BuildRequires:	pkgconfig(ecore)
 
 %description
 Native C++ bindings for D-Bus for use in C++ programs.
@@ -83,10 +82,10 @@ autoreconf
 %{_bindir}/dbusxx-introspect
 %{_bindir}/dbusxx-xml2cpp
 
-%files -n %libname
+%files -n %{libname}
 %{_libdir}/libdbus-c++*-%{api}.so.%{major}*
 
-%files -n %develname
+%files -n %{develname}
 %doc TODO
 %{_includedir}/*
 %{_libdir}/*.so
