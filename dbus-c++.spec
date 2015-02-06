@@ -10,7 +10,7 @@ Version:	0.9.0
 %if 0%{git_date}
 Release:	%mkrel -c %{git_date} 4
 %else
-Release:	3
+Release:	4
 %endif
 
 Summary:	Native C++ bindings for D-Bus
