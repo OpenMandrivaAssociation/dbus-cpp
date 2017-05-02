@@ -1,0 +1,10 @@
+--- dbus-cpp/CMakeLists.txt.omv~	2017-05-02 23:37:33.537285570 +0200
++++ dbus-cpp/CMakeLists.txt	2017-05-02 23:37:36.294373300 +0200
+@@ -102,6 +102,6 @@ add_subdirectory(doc)
+ add_subdirectory(examples)
+ add_subdirectory(include)
+ add_subdirectory(src)
+-add_subdirectory(tests)
++#add_subdirectory(tests)
+ 
+ enable_coverage_report(benchmark)

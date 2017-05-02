@@ -1,0 +1,11 @@
+--- dbus-cpp/src/core/dbus/compiler.cpp.omv~	2017-05-02 23:32:33.562126802 +0200
++++ dbus-cpp/src/core/dbus/compiler.cpp	2017-05-02 23:34:07.218892326 +0200
+@@ -289,7 +289,7 @@ struct Fail
+ };
+ }
+ 
+-int Compiler::main(int argc, const char* argv[])
++__attribute__((visibility("default"))) int Compiler::main(int argc, const char* argv[])
+ {
+     CommandLineOptions cli_options;
+ 
