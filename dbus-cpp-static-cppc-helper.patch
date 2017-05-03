@@ -1,0 +1,11 @@
+--- dbus-cpp/src/core/dbus/CMakeLists.txt.omv~	2017-05-03 13:43:35.949325563 +0200
++++ dbus-cpp/src/core/dbus/CMakeLists.txt	2017-05-03 13:45:26.318330260 +0200
+@@ -81,7 +81,7 @@ install(
+ # installed but just linked to the actual compiler executable.
+ add_library(
+   dbus-cppc-helper
+-
++  STATIC
+   compiler.cpp
+   generator.cpp
+   introspection_parser.cpp
