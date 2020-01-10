@@ -46,7 +46,7 @@ Requires: %{libname} = %{EVRD}
 
 %prep
 %setup -qn %{name}
-%apply_patches
+%autopatch -p1
 %cmake -G Ninja
 
 %build
