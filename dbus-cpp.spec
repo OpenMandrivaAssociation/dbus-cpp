@@ -44,9 +44,11 @@ Summary: Examples for dbus-cpp
 Group: Development/C
 Requires: %{libname} = %{EVRD}
 
+%description examples
+Examples for dbus-cpp
+
 %prep
-%setup -qn %{name}
-%autopatch -p1
+%autosetup -p1 -n %{name}
 %cmake -G Ninja
 
 %build
