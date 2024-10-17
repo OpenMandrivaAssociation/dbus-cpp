@@ -10,7 +10,7 @@ Patch0: dbus-cpp-symbol-visibility.patch
 Patch1: dbus-cpp-no-broken-tests.patch
 Patch2: dbus-cpp-static-cppc-helper.patch
 Summary: C++11 bindings to D-Bus
-URL: http://code.launchpad.net/dbus-cpp
+URL: https://code.launchpad.net/dbus-cpp
 License: LGPLv3
 Group: System/Libraries
 BuildRequires: cmake
